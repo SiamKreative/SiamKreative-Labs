@@ -7,7 +7,7 @@ Zepto(function ($) {
 	var endpoint = '//api.github.com/users/' + username + '/repos';
 	var template = $('#projects-template');
 	var list = $('#projects-list');
-	var ignore = [31160449];
+	var ignore = [31160449, 42847913];
 	var data;
 
 	/**
