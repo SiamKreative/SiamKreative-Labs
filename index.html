@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+	<title>SiamKreative Labs</title>
+
+	<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+	<link rel="stylesheet" href="css/layouts/blog.css">
+
+</head>
+<body>
+
+	<div id="layout" class="pure-g">
+		<div class="sidebar pure-u-1 pure-u-md-1-4">
+			<div class="header">
+				<h1 class="brand-title">SiamKreative Labs</h1>
+				<h2 class="brand-tagline">A list of small projects that I built and maintain</h2>
+				<p><a class="pure-button" href="http://siamkreative.com/">My website &rarr;</a></p>
+			</div>
+		</div>
+
+		<div class="content pure-u-1 pure-u-md-3-4">
+			<div>
+				<div class="posts">
+					<h1 class="content-subhead">Recent Projects</h1>
+
+					<div id="projects-list">Loading...</div>
+					<script id="projects-template" type="text/x-handlebars-template">
+					{{#each this}}
+						<section class="post">
+							<header class="post-header">
+								<h2 class="post-title">{{project_home}}</h2>
+								<p class="post-meta">Created on {{dateFormat created_at}} by <a href="http://siamkreative.com/" class="post-author">SiamKreative</a></p>
+							</header>
+							<div class="post-description">
+								<p>{{description}}</p>
+							</div>
+						</section>
+					{{/each}}
+					</script>
+				</div>
+
+				<div class="footer">
+					<div class="pure-menu pure-menu-horizontal">
+						<ul>
+							<li class="pure-menu-item"><a href="http://siamkreative.com/" class="pure-menu-link">About</a></li>
+							<li class="pure-menu-item"><a href="https://twitter.com/siamkreative" class="pure-menu-link">Twitter</a></li>
+							<li class="pure-menu-item"><a href="https://github.com/SiamKreative/" class="pure-menu-link">GitHub</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.2/handlebars.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+	<script src="app.js"></script>
+
+</body>
+</html>
