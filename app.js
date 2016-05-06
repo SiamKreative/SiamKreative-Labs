@@ -80,16 +80,22 @@ Zepto(function ($) {
 		// Sort the projects by date (descending order)
 		data.sort(dateDesc);
 
-		// Filter the array (ignore specific repos by ID)
+		// Filter the array
 		// http://api.jquery.com/jquery.grep/
 		data = $.grep(data, function (value, i) {
-			for (var i = 0; i < ignore.length; i++) {
-				if (value.id == ignore[i]) {
-					console.log('Filter matches for Github repository ID: ' + value.id);
-					return false
+			// Ignore forks
+			if (value.fork == true) {
+				return false;
+			} else {
+				// Ignore specific repos by ID
+				for (var i = 0; i < ignore.length; i++) {
+					if (value.id == ignore[i]) {
+						console.log('Filter matches for Github repository ID: ' + value.id);
+						return false
+					}
 				}
+				return true;
 			}
-			return true;
 		});
 
 		// Render the template (populate data and generate HTML markup)
