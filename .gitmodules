@@ -1,0 +1,3 @@
+[submodule "Facebook-Download-Album"]
+	path = Facebook-Download-Album
+	url = git@github.com:SiamKreative/Facebook-Download-Album.git
