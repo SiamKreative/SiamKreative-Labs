@@ -1,3 +1,6 @@
 [submodule "Facebook-Download-Album"]
 	path = Facebook-Download-Album
 	url = git@github.com:SiamKreative/Facebook-Download-Album.git
+[submodule "Mobile-Friendly-Test"]
+	path = Mobile-Friendly-Test
+	url = git@github.com:SiamKreative/Mobile-Friendly-Test.git
