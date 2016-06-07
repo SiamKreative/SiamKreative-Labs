@@ -30,17 +30,19 @@
 				<div class="posts">
 					<h1 class="content-subhead">Recent Projects</h1>
 
-					<div id="projects-list">Loading...</div>
+					<div id="projects-list" class="pure-g">Loading...</div>
 					<script id="projects-template" type="text/x-handlebars-template">
 					{{#each this}}
-						<section class="post">
-							<header class="post-header">
-								<h2 class="post-title">{{project_home}}</h2>
-								<p class="post-meta">Created on {{dateFormat created_at}} by <a href="http://siamkreative.com/" class="post-author">SiamKreative</a></p>
-							</header>
-							<div class="post-description">
-								<img class="screenshot" data-src="https://raw.githubusercontent.com/SiamKreative/{{name}}/master/screenshot.png" alt="{{name}}">
-								<p>{{description}}</p>
+						<section class="box post pure-u-1 pure-u-md-1-3">
+							<div class="box-inner">
+								<header class="post-header">
+									<h2 class="post-title">{{project_home}}</h2>
+									<p class="post-meta">Created on {{dateFormat created_at}} by <a href="http://siamkreative.com/" class="post-author">SiamKreative</a></p>
+								</header>
+								<div class="post-description">
+									<img class="screenshot" src="no_image_available.png" data-src="https://raw.githubusercontent.com/SiamKreative/{{name}}/master/screenshot.png" alt="{{name}}">
+									<p>{{description}}</p>
+								</div>
 							</div>
 						</section>
 					{{/each}}

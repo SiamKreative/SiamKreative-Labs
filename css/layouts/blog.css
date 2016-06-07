@@ -158,6 +158,11 @@ img {
 	background: none;
 }
 
+#projects-list .screenshot {
+	margin-top: 1em;
+	width: 100%;
+}
+
 @media (min-width: 48em) {
 	.content {
 		padding: 2em 3em 0;
@@ -173,5 +178,13 @@ img {
 		position: fixed;
 		top: 0;
 		bottom: 0;
+	}
+
+	#projects-list {
+		margin: 0 -30px;
+		position: relative;
+	}
+	#projects-list .box-inner {
+		padding: 0 30px;
 	}
 }

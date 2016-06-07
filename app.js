@@ -112,9 +112,6 @@ Zepto(function ($) {
 		$.ajax({
 			url: imgUrl,
 			type: 'HEAD',
-			error: function () {
-				$(el).remove();
-			},
 			success: function () {
 				$(el).attr('src', imgUrl);
 			}
