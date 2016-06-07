@@ -4,3 +4,6 @@
 [submodule "Mobile-Friendly-Test"]
 	path = Mobile-Friendly-Test
 	url = git@github.com:SiamKreative/Mobile-Friendly-Test.git
+[submodule "Behance-API-Handlebars"]
+	path = Behance-API-Handlebars
+	url = git@github.com:SiamKreative/Behance-API-Handlebars.git
