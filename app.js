@@ -103,4 +103,22 @@ Zepto(function ($) {
 		list.html(renderTemplate(data));
 	}
 
+	/**
+	 * Check if screenshot exists
+	 * http://stackoverflow.com/a/11775226/1414881
+	 */
+	$('img[data-src]').each(function (index, el) {
+		var imgUrl = $(el).attr('data-src');
+		$.ajax({
+			url: imgUrl,
+			type: 'HEAD',
+			error: function () {
+				$(el).remove();
+			},
+			success: function () {
+				$(el).attr('src', imgUrl);
+			}
+		});
+	});
+
 });
