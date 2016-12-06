@@ -7,3 +7,6 @@
 [submodule "Behance-API-Handlebars"]
 	path = Behance-API-Handlebars
 	url = git@github.com:SiamKreative/Behance-API-Handlebars.git
+[submodule "Thanakarn-Icon-Font"]
+	path = Thanakarn-Icon-Font
+	url = git@github.com:SiamKreative/Thanakarn-Icon-Font.git
